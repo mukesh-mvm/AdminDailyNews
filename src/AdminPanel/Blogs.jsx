@@ -259,6 +259,7 @@ const Blogs = () => {
             tag: record?.tag?._id,
             faqs: record?.faqs || [],
             alt: record?.alt,
+            source: record?.source,
             conclusion: record?.conclusion,
             slug: record?.slug,
             subtitle: record?.subtitle,
@@ -423,6 +424,7 @@ const Blogs = () => {
             content: editorContent,
             faqs: values.faqs,
             alt: values.alt,
+            source: values.source,
             slug: values.slug,
             subtitle: values.subtitle,
             Ads: values.Ads,
@@ -487,6 +489,7 @@ const Blogs = () => {
             linkArray: values.linkArray,
             conclusion: values.conclusion,
             slug: values.slug,
+            source: values.source,
             subtitle: values.subtitle,
             image: imageTrue ? image1 : values.logo,
              images: images
@@ -729,6 +732,13 @@ const Blogs = () => {
                         rules={[{ required: true, message: "Please input the name!" }]}
                     >
                         <Input placeholder="Enter Blog subtitle" />
+                    </Form.Item>
+                    <Form.Item
+                        name="source"
+                        label="Source"
+                        rules={[{ required: true, message: "Please Enter the source!" }]}
+                    >
+                        <Input placeholder="Enter News source" />
                     </Form.Item>
 
 
